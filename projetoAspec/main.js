@@ -1,57 +1,31 @@
 var sectionOk = ''
 
-const mes = [
-  {
-    id: 1,
-    category: "janeiro",
-  },
-  {
-    id: 2,
-    category: "fevereiro",
-  },
-  {
-    id: 3,
-    category: "março",
-  },
-  {
-    id: 4,
-    category: "abril",
-  },
-  {
-    id: 5,
-    category: "maio",
-  },
-  {
-    id: 6,
-    category: "junho",
-  },
-  {
-    id: 7,
-    category: "julho",
-  },
-  {
-    id: 8,
-    category: "agosto",
-  },
-  {
-    id: 9,
-    category: "setembro",
-  },
-  {
-    id: 10,
-    category: "outubro",
-  },
-  {
-    id: 11,
-    category: "novembro",
-  },
-  {
-    id: 12,
-    category: "dezembro",
-  },
-];
 
-// mudar as option do mês
+document.addEventListener("DOMContentLoaded", function(){
+
+  var checkbox = document.querySelectorAll("input[class='okCheckBox']");
+
+  for(var item of checkbox){
+     item.addEventListener("click", function(){
+        localStorage.item ? // verifico se existe localStorage
+           localStorage.item = localStorage.item.indexOf(this.id+",") == -1 // verifico de localStorage contém o id
+           ? localStorage.item+this.id+"," // não existe. Adiciono a id no loaclStorage
+           : localStorage.item.replace(this.id+",","") : // já existe, apago do localStorage
+        localStorage.item = this.id+",";  // não existe. Crio com o id do checkbox
+     });
+  }
+
+  if(localStorage.item){ // verifico se existe localStorage
+     for(var item of checkbox){ // existe, percorro as checkbox
+        item.checked = localStorage.item.indexOf(item.id+",") != -1 ? true : false; // marco true nas ids que existem no localStorage
+     }
+  }
+});
+
+
+
+// altera entre as tarefas do mês
+
 const month = document.querySelectorAll(".month");
 const btnMonth = document.querySelectorAll(".btn-month");
 const monthJan = document.querySelector(".section-janeiro");
@@ -70,26 +44,4 @@ btnMonth.forEach((btn) => {
 });
 
 
-
-// // Marcação dos checkBox
-// function save() {
-//   localStorage.setItem("inptMes", JSON.stringify(inptMes));
-// }
-
-// // Marcação dos checkBox
-// const inpCheckBox1 = document.querySelectorAll(".okCheckBox");
-
-// inpCheckBox1.forEach((item) => {
-//   item.addEventListener("click", (event) => {
-//     if(event.target.checked) {
-//       inptMes.push(
-//         {
-//           name: event.target.name
-//         }
-//         );
-//       }
-//       save();
-//   });
-// })
-
-// ler o localStorage, JSON.parese para transformar em objeto
+   

@@ -122,49 +122,120 @@ main{
     justify-content: space-between;
     margin-top: 4.0rem;
 }
+
 /* section */
-.block-section{
+.tipos-obrigacoes {
     display: flex;
     gap: 1.0rem;
 }
-.block-section span{
+
+.tipos-obrigacoes span {
     padding: 0.5rem 4.0rem;
     border-radius: 0px 20px 20px 0px;
     background: #ffffff;
     border: 1px solid #ffffff;
 }
-.block-section p{
+
+.tipos-obrigacoes p {
     font-size: 18px;
     color: #e9be3e;
 }
-/* Datas do Mês */
-.datas-month{
 
+/* Dias do Mês */
+.day-month {
     margin: 2.0rem;
     display: flex;
     flex-direction: row;
-    
+    gap: 1.0rem;
+
 }
 
-
-/* 
-.txtTitulo{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5px;
+.day-month h1 {
+    font-size: 20px;
     color: #004888;
 }
 
-.txtConteudo{
-    display: flex;
-    flex-direction: row;
+/* BOTAO PARA MARCA QUE ATIVIDADE FOI FEITA */
+.okCheckBox{
+    display: none;
+}
+.okCheckBox + label::before{
+ content: '';
+  display: flex;
+  width: 1em;
+  height: 1em;
+  border-radius: 3px;
+  margin-right: 1px;
+  border: 2px solid rgb(89, 180, 208);
+  border-radius: 10px;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+.okCheckBox:checked + label{
+   
+    color:rgb(243, 251, 3);
+    border-radius: 10px;
+}
+.okCheckBox:checked + label{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    
+    height: 6px;
+    background:rgb(247, 232, 11);
+}
+
+/* pagina das atividades dos meses */
+
+
+/* Tarefas-month */
+.tarefas-month p {
     gap: 2.0rem;
 }
-.txtParag{
-    color: #575757;
-    font-size: 15px;
+
+.opt-tarefas {
+    display: flex;
+    gap: 1.5rem;
 }
-.txtComent{
+
+.opt-tarefas p {
+    padding: 5px 10px 0;
+    font-size: 10px;
+    border-radius: 20px;
+
+    color: #ffffff;
+    background: #7E9CB6;
+
+}
+
+/* Info-Tarefas */
+.info-tarefa {
+    display: flex;
+    gap: 1.0rem;
+    margin-bottom: 0.8rem;
+    margin-left: 40px;
+}
+
+.txtParag {
+    margin-top: 8px;
+    font-size: 15px;
     color: #575757;
+}
+
+.txtComent {
     font-size: 12px;
-} */
+    color: #575757;
+}
+/* javaScript ativando e desativando */
+.section-janeiro {
+    display: none;
+}
+
+.section-fevereiro {
+    display: none;
+}
+
+.active {
+    display: block
+}
