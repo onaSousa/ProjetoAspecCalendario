@@ -28,8 +28,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const month = document.querySelectorAll(".month");
 const btnMonth = document.querySelectorAll(".btn-month");
-const monthJan = document.querySelector(".section-janeiro");
-const monthFeb = document.querySelector(".section-fevereiro");
+
 
 btnMonth.forEach((btn) => {
   btn.addEventListener("click", () => {

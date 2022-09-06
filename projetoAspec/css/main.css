@@ -122,7 +122,9 @@ main{
     justify-content: space-between;
     margin-top: 4.0rem;
 }
-
+.month{
+    display: none;
+}
 /* section */
 .tipos-obrigacoes {
     display: flex;
@@ -154,40 +156,54 @@ main{
     font-size: 20px;
     color: #004888;
 }
-
+/* ################################################# */
 /* BOTAO PARA MARCA QUE ATIVIDADE FOI FEITA */
-.okCheckBox{
-    display: none;
-}
-.okCheckBox + label::before{
- content: '';
-  display: flex;
-  width: 1em;
-  height: 1em;
-  border-radius: 3px;
-  margin-right: 1px;
-  border: 2px solid rgb(89, 180, 208);
-  border-radius: 10px;
-  margin-bottom: -2px;
-  cursor: pointer;
-}
-.okCheckBox:checked + label{
-   
-    color:rgb(243, 251, 3);
-    border-radius: 10px;
-}
-.okCheckBox:checked + label{
-    display: block;
-    align-items: center;
-    justify-content: center;
-    border-radius: 300px;
-    
-    height: 6px;
-    background:rgb(247, 232, 11);
-}
 
-/* pagina das atividades dos meses */
+  .form-control {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+  }
 
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: rgb(216, 214, 214);
+    width: 1.40em;
+    height: 1.40em;
+    border: 0.15em solid currentColor;
+    border-radius: 1.15em;
+    transform: translateY(-0.075em);
+  }
+
+  input[type="checkbox"] {
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.40em;
+    height: 0.40em;
+    border-radius: 1.15em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #e9be3e;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+/* #################################################### */
 
 /* Tarefas-month */
 .tarefas-month p {
@@ -196,11 +212,11 @@ main{
 
 .opt-tarefas {
     display: flex;
-    gap: 1.5rem;
+    gap: 5px;
 }
 
 .opt-tarefas p {
-    padding: 5px 10px 0;
+    padding: 7px 10px 0;
     font-size: 10px;
     border-radius: 20px;
 
@@ -227,15 +243,6 @@ main{
     font-size: 12px;
     color: #575757;
 }
-/* javaScript ativando e desativando */
-.section-janeiro {
-    display: none;
-}
-
-.section-fevereiro {
-    display: none;
-}
-
 .active {
     display: block
 }
