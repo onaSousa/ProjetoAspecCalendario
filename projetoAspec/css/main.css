@@ -130,6 +130,7 @@ body {
   margin-top: 4.0rem;
 }
 
+
 .main-header, 
 .main-content {
   display: grid;
@@ -183,8 +184,9 @@ body {
   font-size: 20px;
   color: #004888;
 }
-
+/* ################################################# */
 /* BOTAO PARA MARCA QUE ATIVIDADE FOI FEITA */
+
 .okCheckBox {
   display: none;
 }
@@ -220,6 +222,51 @@ body {
 
 /* pagina das atividades dos meses */
 
+  .form-control {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: rgb(216, 214, 214);
+    width: 1.40em;
+    height: 1.40em;
+    border: 0.15em solid currentColor;
+    border-radius: 1.15em;
+    transform: translateY(-0.075em);
+  }
+
+  input[type="checkbox"] {
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.40em;
+    height: 0.40em;
+    border-radius: 1.15em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #e9be3e;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+/* #################################################### */
 
 /* Tarefas-month */
 .tarefas-month p {
@@ -260,6 +307,7 @@ body {
   color: #575757;
 }
 
+
 /* javaScript ativando e desativando */
 .section-janeiro {
   display: none;
@@ -268,6 +316,7 @@ body {
 .section-fevereiro {
   display: none;
 }
+
 
 .active {
   display: block
