@@ -1,17 +1,11 @@
 /* reset */
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
-svg {
-  fill: currentColor;
-}
+svg { fill: currentColor; }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 /* reset */
 
 /* Helpers */
@@ -72,9 +66,7 @@ body {
   flex-flow: column-reverse;
   align-self: flex-end;
 }
-.c-title-page__num {
-  font-size: 4.5rem;
-}
+.c-title-page__num { font-size: 4.5rem; }
 .c-title-page__txt {
   color: #004888;
   font-size: 0.78rem;
@@ -90,15 +82,9 @@ body {
   background-color: #fff;
 }
 
-.navbar {
-  align-self: flex-end;
-}
-.navbar ul {
-  display: flex;
-}
-.navbar li:not(:last-child) {
-  margin-right: 1px;
-}
+.navbar { align-self: flex-end; }
+.navbar ul { display: flex; }
+.navbar li:not(:last-child) { margin-right: 1px; }
 
 .btn-month {
   display: block;
@@ -129,9 +115,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 0.4rem;
 }
-.month {
-  display: none;
-}
+.month { display: none; }
 
 /* header main */
 .c-heading-section {
@@ -142,9 +126,7 @@ body {
   line-height: 1;
   text-transform: uppercase;
 }
-.c-heading-section.m-left {
-  padding-left: 1rem;
-}
+.c-heading-section.m-left { padding-left: 1rem; }
 .c-heading-section.m-right {
   text-align: right;
   padding-right: 1rem;
