@@ -4,8 +4,8 @@
 *::after { box-sizing: border-box; }
 
 svg { fill: currentColor; }
-
 a { text-decoration: none; }
+strong { font-weight: 700; }
 /* reset */
 
 /* Helpers */
@@ -30,6 +30,8 @@ a { text-decoration: none; }
   left: 1rem;
   width: auto;
 }
+
+.h-db { display: block; }
 /* Helpers */
 
 /* Default */
@@ -163,7 +165,7 @@ body {
 /* ################################################# */
 /* BOTAO PARA MARCA QUE ATIVIDADE FOI FEITA */
 
-.form-control {
+/* .form-control {
   font-family: system-ui, sans-serif;
   font-size: 2rem;
   font-weight: bold;
@@ -171,7 +173,7 @@ body {
   display: grid;
   grid-template-columns: 1em auto;
   gap: 0.5em;
-}
+} */
 
 input[type="checkbox"] {
   appearance: none;
@@ -210,30 +212,29 @@ input[type="checkbox"]:checked::before {
 /* #################################################### */
 
 /* Tarefas-month */
-.tarefas-month p {
-}
+/* .tarefas-month p {} */
 
-.opt-tarefas {
+/* .opt-tarefas { display: flex; } */
+.c-task {
   display: flex;
+  column-gap: .8rem;
+  margin-bottom: 1.5rem;
 }
-
-<<<<<<< HEAD
-/* .opt-tarefas p {
-  padding: 5px 10px 0;
-  font-size: 10px;
-=======
-.opt-tarefas p {
+.c-task__title {
   display: flex;
-  align-items: center;
-  margin: 5px;
-  padding: 3px 15px 3px 15px;
-  font-size: 9px;
->>>>>>> ea6f549bb0f58b06b45406977b9283a562facd3f
-  border-radius: 20px;
-  color: #ffffff;
-<<<<<<< HEAD
-  background: #7E9CB6;
-} */
+  align-items: flex-start;
+  column-gap: 5px;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #004888;
+}
+.c-task__desc {
+  display: flex;
+  column-gap: 1rem;
+  font-size: 14px;
+}
+.c-task__desc small { font-size: 12px; }
+
 .c-badge {
   color: #ffffff;
   font-size: 10px;
@@ -241,12 +242,9 @@ input[type="checkbox"]:checked::before {
   display: inline-flex;
   text-transform: uppercase;
   white-space: nowrap;
-  padding: 3px 12px;
+  padding: 3px 8px;
   border-radius: 50px;
   background: #7E9CB6;
-=======
-  background: #7e9cb6;
->>>>>>> ea6f549bb0f58b06b45406977b9283a562facd3f
 }
 
 /* Info-Tarefas */
@@ -257,11 +255,11 @@ input[type="checkbox"]:checked::before {
   margin-left: 40px;
 }
 
-.txtParag {
+/* .txtParag {
   margin-top: 8px;
   font-size: 15px;
   color: #575757;
-}
+} */
 
 .txtComent {
   font-size: 12px;
