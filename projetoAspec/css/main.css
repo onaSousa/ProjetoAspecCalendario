@@ -1,18 +1,11 @@
 /* reset */
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
-svg {
-  fill: currentColor;
-}
+svg { fill: currentColor; }
 
-a {
-  text-decoration: none;
-}
-
+a { text-decoration: none; }
 /* reset */
 
 /* Helpers */
@@ -27,7 +20,6 @@ a {
   white-space: nowrap;
   width: 1px;
 }
-
 .visually-hidden:focus {
   clip: auto;
   height: auto;
@@ -38,7 +30,6 @@ a {
   left: 1rem;
   width: auto;
 }
-
 /* Helpers */
 
 /* Default */
@@ -50,7 +41,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', Tahoma, 'DejaVu Sans', sans-serif;
+  font-family: "Roboto", Tahoma, "DejaVu Sans", sans-serif;
   font-size: 1rem;
   text-align: left;
   margin: 0;
@@ -60,12 +51,10 @@ body {
 }
 
 .container {
-  width: 100%;
   max-width: 1280px;
   padding: 0 1.5rem;
   margin: 0 auto;
 }
-
 /* Default */
 
 /* header section */
@@ -77,12 +66,10 @@ body {
   flex-flow: column-reverse;
   align-self: flex-end;
 }
-
 .c-title-page__num { font-size: 4.5rem; }
-
 .c-title-page__txt {
   color: #004888;
-  font-size: .78rem;
+  font-size: 0.78rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -93,14 +80,11 @@ body {
   width: 180px;
   height: 48px;
   background-color: #fff;
-
 }
 
 .navbar { align-self: flex-end; }
 .navbar ul { display: flex; }
 .navbar li:not(:last-child) { margin-right: 1px; }
-
-/* .header-container{} */
 
 .btn-month {
   display: block;
@@ -110,32 +94,28 @@ body {
   padding: 4rem 1rem 0.5rem;
   background-color: #fff;
 }
-
 .btn-month:hover {
   color: #e9be3e;
   background-color: #004888;
   transition: 0.3s;
 }
-
 .btn-month.active {
   color: #e9be3e;
   background-color: #004888;
   box-shadow: 0 6px 0 #004888;
 }
-
 /* header section */
-
 .main {
   overflow: hidden;
-  margin-top: 4.0rem;
+  margin-top: 4rem;
 }
-
-.main-header, 
+.main-header,
 .main-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: .5rem;
+  column-gap: 0.4rem;
 }
+.month { display: none; }
 
 /* header main */
 .c-heading-section {
@@ -167,75 +147,91 @@ body {
   border-radius: 20px 0 0 20px;
   left: 100%;
 }
-/* header main */
-
 
 /* Dias do Mês */
 .day-month {
-  margin: 2.0rem;
+  margin: 4%;
   display: flex;
   flex-direction: row;
-  gap: 1.0rem;
-
+  gap: 0.8rem;
 }
 
 .day-month h1 {
-  font-size: 20px;
+  font-size:18px;
   color: #004888;
 }
-
+/* ################################################# */
 /* BOTAO PARA MARCA QUE ATIVIDADE FOI FEITA */
-.okCheckBox {
-  display: none;
+
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
 }
 
-.okCheckBox+label::before {
-  content: '';
-  display: flex;
-  width: 1em;
-  height: 1em;
-  border-radius: 3px;
-  margin-right: 1px;
-  border: 2px solid rgb(89, 180, 208);
-  border-radius: 10px;
-  margin-bottom: -2px;
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: rgb(216, 214, 214);
+  width: 1.4em;
+  height: 1.4em;
+  border: 0.15em solid currentColor;
+  border-radius: 1.15em;
+  transform: translateY(-0.075em);
+}
+
+input[type="checkbox"] {
+  /* ...existing styles */
+  display: grid;
+  place-content: center;
   cursor: pointer;
 }
 
-.okCheckBox:checked+label {
-
-  color: rgb(243, 251, 3);
-  border-radius: 10px;
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 1.15em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #e9be3e;
+  cursor: pointer;
 }
 
-.okCheckBox:checked+label {
-  display: block;
-  align-items: center;
-  justify-content: center;
-  border-radius: 300px;
-
-  height: 6px;
-  background: rgb(247, 232, 11);
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
-
-/* pagina das atividades dos meses */
-
+/* #################################################### */
 
 /* Tarefas-month */
 .tarefas-month p {
-  gap: 2.0rem;
 }
 
 .opt-tarefas {
   display: flex;
-  gap: 1.5rem;
 }
 
+<<<<<<< HEAD
 /* .opt-tarefas p {
   padding: 5px 10px 0;
   font-size: 10px;
+=======
+.opt-tarefas p {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  padding: 3px 15px 3px 15px;
+  font-size: 9px;
+>>>>>>> ea6f549bb0f58b06b45406977b9283a562facd3f
   border-radius: 20px;
   color: #ffffff;
+<<<<<<< HEAD
   background: #7E9CB6;
 } */
 .c-badge {
@@ -248,12 +244,15 @@ body {
   padding: 3px 12px;
   border-radius: 50px;
   background: #7E9CB6;
+=======
+  background: #7e9cb6;
+>>>>>>> ea6f549bb0f58b06b45406977b9283a562facd3f
 }
 
 /* Info-Tarefas */
 .info-tarefa {
   display: flex;
-  gap: 1.0rem;
+  gap: 1rem;
   margin-bottom: 0.8rem;
   margin-left: 40px;
 }
@@ -268,20 +267,9 @@ body {
   font-size: 12px;
   color: #575757;
 }
-
-/* javaScript ativando e desativando */
-.section-janeiro {
-  display: none;
-}
-
-.section-fevereiro {
-  display: none;
-}
-
 .active {
-  display: block
+  display: block;
 }
-
 
 /* 
   RESPONSIVE
@@ -302,7 +290,9 @@ body {
     overflow-x: auto;
   }
 
-  .c-cta { display: none; }
+  .c-cta {
+    display: none;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -312,7 +302,7 @@ body {
     align-items: center;
   }
 
-  .main-header, 
+  .main-header,
   .main-content {
     grid-template-columns: 3fr 2fr;
     column-gap: 3rem;

@@ -1,64 +1,399 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <title>Calendário de Obrigações 2022</title>
-  <meta name="description" content="Relação mensal das obrigações contábies das entidades municipais">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <title>Calendário de Obrigações 2022</title>
+    <meta name="description" content="Relação mensal das obrigações contábies das entidades municipais"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
 
-  <meta name="theme-color" content="#ecf0f9">
-</head>
-<body>
-  <a href="#nav-principal" class="visually-hidden">Pular para o menu principal</a>
-  <a href="#main-content" class="visually-hidden">Pular para o conteúdo principal</a>
+    <meta name="theme-color" content="#ecf0f9">
+  </head>
+  <body>
+    <a href="#nav-principal" class="visually-hidden">Pular para o menu principal</a>
+    <a href="#main-content" class="visually-hidden">Pular para o conteúdo principal</a>
 
-  <header class="header-container container">
-    <h1 class="c-title-page">
-      <em class="c-title-page__txt">Obrigaçoes Contábeis</em> <strong class="c-title-page__num">2022</strong>
-    </h1>
-    <nav id="nav-principal" class="navbar">
-      <ul>
-        <li><a href="#" id="janeiro" class="btn-month active">Jan</a></li>
-        <li><a href="#" id="fevereiro" class="btn-month">Fev</a></li>
-        <li><a href="#" id="março" class="btn-month">Mar</a></li>
-        <li><a href="#" id="abril" class="btn-month">Abr</a></li>
-        <li><a href="#" id="maio" class="btn-month">Mai</a></li>
-        <li><a href="#" id="junho" class="btn-month">Jun</a></li>
-        <li><a href="#" id="julho" class="btn-month">Jul</a></li>
-        <li><a href="#" id="agosto" class="btn-month">Ago</a></li>
-        <li><a href="#" id="setembro" class="btn-month">Set</a></li>
-        <li><a href="#" id="outubro" class="btn-month">Out</a></li>
-        <li><a href="#" id="novembro" class="btn-month">Nov</a></li>
-        <li><a href="#" id="dezembro" class="btn-month">Dez</a></li>
-      </ul>
-    </nav>
-    <a href="#" class="c-cta"></a>
-  </header>
-  <main id="main-content" class="main">
-    <div class="container">
-      <section class="main-header">
-        <h2 class="c-heading-section m-left">Obrigações federais</h2>
-        <h2 class="c-heading-section m-right">Obrigações estaduais</h2>
-      </section>
-      <section class="main-content">
-        
-    <!-- janeiro-->
-        <div id="jan" class="month section-janeiro">
+    <header class="header-container container">
+      <h1 class="c-title-page">
+        <em class="c-title-page__txt">Obrigaçoes Contábeis</em>
+        <strong class="c-title-page__num">2022</strong>
+      </h1>
+      <!-- Navbar com os botões de dos meses -->
+      <nav id="nav-principal" class="navbar">
+        <ul>
+          <li><a href="#" id="jan-btn" class="btn-month ">Jan</a></li>
+          <li><a href="#" id="fev-btn" class="btn-month">Fev</a></li>
+          <li><a href="#" id="mar-btn" class="btn-month">Mar</a></li>
+          <li><a href="#" id="abr-btn" class="btn-month">Abr</a></li>
+          <li><a href="#" id="mai-btn" class="btn-month">Mai</a></li>
+          <li><a href="#" id="jun-btn" class="btn-month">Jun</a></li>
+          <li><a href="#" id="jul-btn" class="btn-month">Jul</a></li>
+          <li><a href="#" id="ago-btn" class="btn-month">Ago</a></li>
+          <li><a href="#" id="set-btn" class="btn-month">Set</a></li>
+          <li><a href="#" id="out-btn" class="btn-month ">Out</a></li>
+          <li><a href="#" id="nov-btn" class="btn-month">Nov</a></li>
+          <li><a href="#" id="dez-btn" class="btn-month">Dez</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="c-cta"></a>
+    </header>
+    <!-- Main com os meses -->
+    <main id="main-content" class="main">
+      <div class="container">
+        <section class="main-header">
+          <h2 class="c-heading-section m-left">Obrigações federais</h2>
+          <h2 class="c-heading-section m-right">Obrigações estaduais</h2>
+       </section>
+       <section class="main-content">
+         
+          <!-- Janeiro-->
+          <div id="jan" class="month section-janeiro">
+            <!-- tarefas dia 30 -->
+            <div class="day-month">
+              <div>
+                <h1 class="btn-dia">30</h1>
+              </div>
+              <div class="container-column">
+                <!-- Tarefas month -->
+                <div class="tarefas-month">
+                  <div class="opt-tarefas">
+                    <!-- input -->
+                    <label for="form-control">
+                      <input type="checkbox" name="jan-30" class="okCheckBox" id="jan-30-1" />
+                    </label>
+                    <h1 class="txtTitulo">
+                      RREO(Relatório Resumido da Execução Orçamentária)
+                    </h1>
+                    <p>ENVIO ATRAVÉS DO SICONFI</p>
+                  </div>
+                  <div class="info-tarefa">
+                    <p class="txtParag">
+                      Referente à: <strong>6° bimestre de 2021</strong>
+                    </p>
+                  </div>
+                </div>
+                <!-- Tarefas-month -->
+                <div class="tarefas-month">
+                  <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <!-- input -->
+                      <label for="form-control">
+                        <input type="checkbox" name="check2" class="okCheckBox" id="jan-30-2"/>
+                      </label>
+                      <h1 class="txtTitulo">RGF(Relatório de Gestão Fiscal)</h1>
+                      <p>ENVIO ATRAVÉS DO SICONFI</p>
+                    </div>
+                    <!-- Info-Tarefas -->
+                    <div class="info-tarefa">
+                      <div>
+                        <p class="txtParag">
+                          Referente à: <strong>2° semestre de 2021</strong>
+                        </p>
+                        <p class="txtComent">
+                          (Municípios com menos de 50.000 habitantes)
+                        </p>
+                      </div>
+                      <div>
+                        <p class="txtParag">
+                          Referente à: <strong>2° semestre de 2021</strong>
+                        </p>
+                        <p class="txtComent">
+                          (Municípios com menos de 50.000 habitantes)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tarefas-month -->
+                <div class="tarefas-month">
+                  <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <!-- input -->
+                      <label for="form-control">
+                        <input type="checkbox"  name="jan-30-3" class="okCheckBox" id="jan-30-3"/>
+                      </label>
+                      <h1 class="txtTitulo">
+                        SIOPE(Sistema de Informações Sobre Orçamentos Públicos em
+                        Educação)
+                      </h1>
+                    </div>
+                    <!-- Info-Tarefas -->
+                    <div class="info-tarefa">
+                      <div>
+                        <p class="txtParag">
+                          Referente à: <strong>6° bimestre de 2021</strong>
+                        </p>
+                        <p class="txtComent"></p>
+                      </div>
+                      <div>
+                        <p class="txtParag"></p>
+                        <p class="txtComent"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tarefas-month -->
+                <div class="tarefas-month">
+                  <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <!-- input -->
+                      <label for="form-control">
+                        <input type="checkbox" name="jan-30-4" class="okCheckBox" id="jan-30-4"/>
+                      </label>
+                      <h1 class="txtTitulo">
+                        SIOPS(Sistema de Informações Sobre Orçamentos Públicos em
+                        Saúde)
+                      </h1>
+                    </div>
+                    <!-- Info-Tarefas -->
+                    <div class="info-tarefa">
+                      <div>
+                        <p class="txtParag">
+                          Referente à: <strong>6° bimestre de 2021</strong>
+                        </p>
+                        <p class="txtComent"></p>
+                      </div>
+                      <div>
+                        <p class="txtParag"></p>
+                        <p class="txtComent"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- tarefas dia 31 -->
+            <div class="day-month">
+              <div>
+                <h1 class="btn-dia">31</h1>
+              </div>
+              <div class="container-column">
+                <!-- Tarefas-month -->
+                <div class="tarefas-month">
+                  <div class="opt-tarefas">
+                    <!-- input -->
+                    <label for="form-control">
+                      <input type="checkbox" name="jan-31-1" class="okCheckBox" id="jan-31-1"/>
+                    </label>
+                    <h1 class="txtTitulo">CDP(Cadastro da Dívida Pública)</h1>
+                  </div>
+                  <div class="info-tarefa">
+                    <p class="txtParag"></p>
+                  </div>
+                </div>
+                <!-- Tarefas-month -->
+                <div class="tarefas-month">
+                  <div class="opt-tarefas">
+                    <!-- input -->
+                    <label for="form-control">
+                      <input type="checkbox" name="jan-31-2" class="okCheckBox" id="jan-31-2"/>
+                    </label>
+                    <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                  </div>
+                  <div class="info-tarefa">
+                    <p class="txtParag">
+                      Referente à: <strong>dezembro de 2021</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fevereiro -->
+          <div id="fev" class="month section-fevereiro">
+            <!-- tarefas dia 28 -->
+            <div class="day-month">
+              <div>
+                <h1 class="btn-dia">28</h1>
+              </div>
+              <div class="container-column">
+                <!-- Tarefas month -->
+                <div class="tarefas-month">
+                  <div class="opt-tarefas">
+                    <label for="check7">
+                      <input type="checkbox" name="check7" class="okCheckBox" id="fev-28-1"/>
+                    </label>
+                    <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                    <p>ENVIO ATRAVÉS DO SICONFI</p>
+                  </div>
+                  <div class="info-tarefa">
+                    <p class="txtParag">
+                      Referente à: <strong>janeiro de 2022</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Março -->
+          <div id="mar" class="month section-marco">
+            <!-- tarefas dia 30 -->
+            <div class="day-month">
+              <div>
+                <h1 class="btn-dia">30</h1>
+              </div>
+              <div class="container-column">
+                <!-- Tarefas month -->
+                <div class="tarefas-month">
+                  <div class="opt-tarefas">
+                    <label for="form-control">
+                      <input type="checkbox" name="mar-30-1" class="okCheckBox" id="mar-30-1"/>
+                    </label>
+                    <h1 class="txtTitulo">RREO(Relatório Resumido da Execução Orçamentária)</h1>
+                    <p>ENVIO ATRAVÉS DO SICONFI</p>
+                  </div>
+                  <div class="info-tarefa">
+                    <p class="txtParag">
+                      Referente à: <strong>1° bimestre de 2022</strong>
+                    </p>
+                  </div>
+                </div>
+                <!-- Tarefas month -->
+                <div class="tarefas-month">
+                  <div class="opt-tarefas">
+                    <label for="form-control">
+                      <input type="checkbox" name="mar-30-2" class="okCheckBox" id="mar-30-2"/>
+                    </label>
+                    <h1 class="txtTitulo">SIOPE(Sistema de Informações sobre Orçamentos Públicos em Educação)</h1>
+                    <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
+                  </div>
+                  <div class="info-tarefa">
+                    <p class="txtParag">
+                      Referente à: <strong>1° bimestre de 2022</strong>
+                    </p>
+                  </div>
+                </div>
+                 <!-- Tarefas month -->
+                <div class="tarefas-month">
+                  <div class="opt-tarefas">
+                    <label for="check10">
+                      <input type="checkbox" name="mar-30-3" class="okCheckBox" id="mar-30-3"/>
+                    </label>
+                    <h1 class="txtTitulo">SIOPS(Sistema de Informações sobre Orçamentos Públicos em Saúde)</h1>
+                    <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
+                  </div>
+                  <div class="info-tarefa">
+                    <p class="txtParag">
+                      Referente à: <strong>1° bimestre de 2022</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <!-- tarefas dia 31 -->
+            <div class="day-month">
+              <div>
+                <h1 class="btn-dia">31</h1>
+              </div>
+              <div class="container-column">
+                <!-- Tarefas month -->
+                <div class="tarefas-month">
+                      <div class="opt-tarefas">
+                        <label for="form-control">
+                          <input type="checkbox" name="mar-31-1" class="okCheckBox" id="mar-31-1"/>
+                        </label>
+                        <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                          <p>ENVIO ATRAVÉS DO SICONFI</p>
+                      </div>
+                      <div class="info-tarefa">
+                        <p class="txtParag">
+                          Referente à: <strong>fevereiro de 2022</strong>
+                        </p>
+                      </div>
+                </div>
+                <!-- Tarefas month -->
+                <div class="tarefas-month">
+                      <div class="opt-tarefas">
+                        <label for="form-control">
+                          <input type="checkbox" name="mar-31-2" class="okCheckBox" id="mar-31-2"/>
+                        </label>
+                        <h1 class="txtTitulo">MSC de Encerramento(Matriz de Saldos Contábeis)</h1>
+                         <p>ENVIO ATRAVÉS DO SICONFI</p>
+                      </div>
+                      <div class="info-tarefa">
+                        <p class="txtParag">
+                          Referente à: <strong>2021</strong>
+                        </p>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Abril -->
+          <div id="abr" class="month section-abril">
+            <!-- tarefas dia 30 -->
+            <div class="day-month">
+              <div>
+                <h1 class="btn-dia">30</h1>
+              </div>
+              <div class="container-column">
+                <!-- Tarefas month -->
+                <div class="tarefas-month">
+                  <div class="opt-tarefas">
+                    <label for="form-control">
+                      <input type="checkbox" name="abr-30-1" class="okCheckBox" id="abr-30-1"/>
+                    </label>
+                    <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                    <p>ENVIO ATRAVÉS DO SICONFI</p>
+                  </div>
+                  <div class="info-tarefa">
+                    <p class="txtParag">
+                      Referente à: <strong>março de 2022</strong>
+                    </p>
+                  </div>
+                </div>
+                <!-- Tarefas month -->
+                <div class="tarefas-month">
+                  <div class="opt-tarefas">
+                    <label for="form-control">
+                      <input type="checkbox" name="abr-30-2" class="okCheckBox" id="abr-30-2"/>
+                    </label>
+                      <h1 class="txtTitulo">DCA(Declaração de Contas Anuais)</h1>
+                      <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
+                    </div>
+                    <div class="info-tarefa">
+                      <p class="txtParag">
+                        Referente à: <strong>2021</strong>
+                      </p>
+                    </div>
+                </div>
+                <!-- Tarefas month -->
+                <div class="tarefas-month">
+                  <div class="opt-tarefas">
+                    <label for="form-control">
+                      <input type="checkbox" name="abr-30-3" class="okCheckBox" id="abr-30-3"/>
+                    </label>
+                    <h1 class="txtTitulo">Competência Tributária</h1>
+                    <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
+                  </div>
+                  <div class="info-tarefa">
+                    <!-- <p class="txtParag">
+                      Referente à: <strong>1° bimestre de 2022</strong>
+                    </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Maio -->
+          <div id="mai" class="month section-maio">
           <!-- tarefas dia 30 -->
+<<<<<<< HEAD
           <div class="day-month">
             <div>
               <h1 class="btn-dia">30</h1>
@@ -77,274 +412,517 @@
                     Referente à: <strong>6° bimestre de 2021</strong>
                   </p>
                 </div>
+=======
+            <div class="day-month">
+              <div>
+                <h1 class="btn-dia">30</h1>
+>>>>>>> ea6f549bb0f58b06b45406977b9283a562facd3f
               </div>
-              <!-- Tarefas-month -->
-              <div class="tarefas-month">
+              <div class="container-column">
+                <!-- Tarefas month -->
                 <div class="tarefas-month">
                   <div class="opt-tarefas">
-                 <!-- input -->
-                    <input type="checkbox" name="check2" class="okCheckBox" id="check2" />
-                    <label for="check2"></label>
-                    <h1 class="txtTitulo">RGF(Relatório de Gestão Fiscal)</h1>
+                    <label for="form-control">
+                      <input type="checkbox" name="mai-30-1" class="okCheckBox" id="mai-30-1"/>
+                    </label>
+                    <h1 class="txtTitulo">RREO(Relatório Resumido da Execução Orçamentária)</h1>
                     <p>ENVIO ATRAVÉS DO SICONFI</p>
                   </div>
-                  <!-- Info-Tarefas -->
                   <div class="info-tarefa">
-                    <div>
-                      <p class="txtParag">
-                        Referente à: <strong>2° semestre de 2021</strong>
-                      </p>
-                      <p class="txtComent">
-                        (Municípios com menos de 50.000 habitantes)
-                      </p>
-                    </div>
-                    <div>
-                      <p class="txtParag">
-                        Referente à: <strong>2° semestre de 2021</strong>
-                      </p>
-                      <p class="txtComent">
-                        (Municípios com menos de 50.000 habitantes)
-                      </p>
-                    </div>
+                    <p class="txtParag">
+                      Referente à: <strong>2° bimestre de 2022</strong>
+                    </p>
                   </div>
                 </div>
-              </div>
-              <!-- Tarefas-month -->
-              <div class="tarefas-month">
+                <!-- Tarefas month -->
+                <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <label for="form-control">
+                        <input type="checkbox" name="mai-30-2" class="okCheckBox" id="mai-30-2"/>
+                      </label>
+                      <h1 class="txtTitulo">RGF(Relarório de Gestão Fiscal)</h1>
+                      <p>ENVIO ATRAVÉS DO SICONFI</p>
+                    </div>
+                                <!-- Info-Tarefas -->
+                    <div class="info-tarefa">
+                      <div class="info">
+                        <p class="txtParag">
+                          Referente à: <strong>2° semestre de 2021</strong>
+                        </p>
+                        <p class="txtComent">
+                          (Municípios com menos de 50.000 habitantes)
+                        </p>
+                      </div>
+                      <div class="info">
+                        <!-- <p class="txtParag">
+                          Referente à: <strong>2° semestre de 2021</strong>
+                        </p>
+                        <p class="txtComent">
+                          (Municípios com menos de 50.000 habitantes)
+                        </p> -->
+                      </div>
+                    </div>
+                </div>
+                <!-- Tarefas month -->
                 <div class="tarefas-month">
                   <div class="opt-tarefas">
-                    <!-- input -->
-                    <input  type="checkbox" name="check3" class="okCheckBox" id="check3" />
-                    <label for="check3"></label>
-                    <h1 class="txtTitulo">
-                      SIOPE(Sistema de Informações Sobre Orçamentos Públicos em
-                      Educação)
-                    </h1>
+                    <label for="form-control">
+                      <input type="checkbox" name="mai-30-3" class="okCheckBox" id="mai-30-3"/>
+                    </label>
+                    <h1 class="txtTitulo">SIOPE(Sistema de Informações sobre Orçamentos Públicos em Educação)</h1>
+                    <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
                   </div>
-                  <!-- Info-Tarefas -->
                   <div class="info-tarefa">
-                    <div>
-                      <p class="txtParag">
-                        Referente à: <strong>6° bimestre de 2021</strong>
-                      </p>
-                      <p class="txtComent"></p>
-                    </div>
-                    <div>
-                      <p class="txtParag"></p>
-                      <p class="txtComent"></p>
-                    </div>
+                    <p class="txtParag">
+                      Referente à: <strong>2° bimestre de 2022</strong>
+                    </p>
                   </div>
                 </div>
-              </div>
-              <!-- Tarefas-month -->
-              <div class="tarefas-month">
-                <div class="tarefas-month">
-                  <div class="opt-tarefas">
-                    <!-- input -->
-                    <input  type="checkbox" name="check4" class="okCheckBox" id="check4" />
-                    <label for="check4"></label>
-                    <h1 class="txtTitulo">
-                      SIOPS(Sistema de Informações Sobre Orçamentos Públicos em
-                      Saúde)
-                    </h1>
-                  </div>
-                  <!-- Info-Tarefas -->
-                  <div class="info-tarefa">
-                    <div>
+                  <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <label for="form-control">
+                        <input type="checkbox" name="mai-30-4" class="okCheckBox" id="mai-30-4"/>
+                      </label>
+                      <h1 class="txtTitulo">SIOPS(Sistema de Informações sobre Orçamentos Públicos em Saúde)</h1>
+                      <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
+                    </div>
+                    <div class="info-tarefa">
                       <p class="txtParag">
-                        Referente à: <strong>6° bimestre de 2021</strong>
+                        Referente à: <strong>2° bimestre de 2022</strong>
                       </p>
-                      <p class="txtComent"></p>
-                    </div>
-                    <div>
-                      <p class="txtParag"></p>
-                      <p class="txtComent"></p>
                     </div>
                   </div>
-                </div>
               </div>
             </div>
-          </div>
-          <!-- ============================-->
           <!-- tarefas dia 31 -->
-          <div class="day-month">
-            <div>
-              <h1 class="btn-dia">31</h1>
+            <div class="day-month">
+                <div>
+                  <h1 class="btn-dia">31</h1>
+                </div>
+                <div class="container-column">
+                  <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                        <div class="opt-tarefas">
+                          <label for="form-control">
+                            <input type="checkbox" name="mai-31-1" class="okCheckBox" id="mai-31-1"/>
+                          </label>
+                          <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                            <p>ENVIO ATRAVÉS DO SICONFI</p>
+                        </div>
+                        <div class="info-tarefa">
+                          <p class="txtParag">
+                            Referente à: <strong>abril de 2022</strong>
+                          </p>
+                        </div>
+                  </div>
+         
+                </div>
             </div>
-            <div class="container-column">
-              <!-- Tarefas-month -->
-              <div class="tarefas-month">
-                <div class="opt-tarefas">
-                  <!-- input -->
-                  <input type="checkbox" name="check5" class="okCheckBox" id="check5"/>
-                  <label for="check5"></label>
-                  <h1 class="txtTitulo">CDP(Cadastro da Dívida Pública)</h1>
+          </div>
+          <!-- Junho -->
+          <div id="jun" class="month section-junho">
+              <!-- tarefas dia 30 -->
+              <div class="day-month">
+                <div>
+                  <h1 class="btn-dia">30</h1>
                 </div>
-                <div class="info-tarefa">
-                  <p class="txtParag"></p>
-                </div>
-              </div>
-              <!-- Tarefas-month -->
-              <div class="tarefas-month">
-                <div class="opt-tarefas">
-                  <!-- input -->
-                  <input  type="checkbox" name="check6" class="okCheckBox" id="check6"/>
-                 <label for="check6"></label>
-                  <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
-                </div>
-                <div class="info-tarefa">
-                  <p class="txtParag">
-                    Referente à: <strong>dezembro de 2021</strong>
-                  </p>
-                </div>
+                <div class="container-column">
+                  <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <label for="form-control">
+                        <input type="checkbox" name="jun-30-1" class="okCheckBox" id="jun-30-1"/>
+                      </label>
+                      <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                      <p>ENVIO ATRAVÉS DO SICONFI</p>
+                    </div>
+                    <div class="info-tarefa">
+                      <p class="txtParag">
+                        Referente à: <strong>maio de 2022</strong>
+                      </p>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
-        </div>
-        
-    <!-- Fevereiro -->
-        <div id="fev" class="month section-fevereiro">
-          <!-- tarefas dia 1 -->
-          <div class="day-month">
-            <div>
-              <h1 class="btn-dia">1</h1>
-            </div>
-            <div class="container-column">
-              <!-- Tarefas month -->
-              <div class="tarefas-month">
-                <div class="opt-tarefas">
-                  <input type="checkbox" name="check7" class="okCheckBox" id="check7" />
-                  <label for="check7"></label>
-                  <h1 class="txtTitulo">
-                    RREO(Relatório Resumido da Execução Orçamentária)
-                  </h1>
-                  <p>ENVIO ATRAVÉS DO SICONFI</p>
+          <!-- Julho -->
+          <div id="jul" class="month section-julho">
+              <!-- tarefas dia 30 -->
+              <div class="day-month">
+                <div>
+                  <h1 class="btn-dia">30</h1>
                 </div>
-                <div class="info-tarefa">
-                  <p class="txtParag">
-                    Referente à: <strong>6° bimestre de 2021</strong>
-                  </p>
+                <div class="container-column">
+                  <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <label for="form-control">
+                        <input type="checkbox" name="jul-30-1" class="okCheckBox" id="jul-30-1"/>
+                      </label>
+                      <h1 class="txtTitulo">RREO(Relatório Resumido da Execução Orçamentária)</h1>
+                      <p>ENVIO ATRAVÉS DO SICONFI</p>
+                    </div>
+                    <div class="info-tarefa">
+                      <p class="txtParag">
+                        Referente à: <strong>3° bimestre de 2022</strong>
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                      <div class="opt-tarefas">
+                        <label for="form-control">
+                          <input type="checkbox" name="jul-30-2" class="okCheckBox" id="jul-30-2"/>
+                        </label>
+                        <h1 class="txtTitulo">RGF(Relarório de Gestão Fiscal)</h1>
+                        <p>ENVIO ATRAVÉS DO SICONFI</p>
+                      </div>
+                                  <!-- Info-Tarefas -->
+                      <div class="info-tarefa">
+                        <div class="info">
+                          <p class="txtParag">
+                            Referente à: <strong>1° semestre de 2022</strong>
+                          </p>
+                          <p class="txtComent">
+                            (Municípios com menos de 50.000 habitantes)
+                          </p>
+                        </div>
+                        <div class="info">
+                          <!-- <p class="txtParag">
+                            Referente à: <strong>2° semestre de 2021</strong>
+                          </p>
+                          <p class="txtComent">
+                            (Municípios com menos de 50.000 habitantes)
+                          </p> -->
+                        </div>
+                      </div>
+                  </div>
+                  <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <label for="form-control">
+                        <input type="checkbox" name="jul-30-3" class="okCheckBox" id="jul-30-3"/>
+                      </label>
+                      <h1 class="txtTitulo">SIOPE(Sistema de Informações sobre Orçamentos Públicos em Educação)</h1>
+                      <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
+                    </div>
+                    <div class="info-tarefa">
+                      <p class="txtParag">
+                        Referente à: <strong>3° bimestre de 2022</strong>
+                      </p>
+                    </div>
+                  </div>
+                    <!-- Tarefas month -->
+                    <div class="tarefas-month">
+                      <div class="opt-tarefas">
+                        <label for="form-control">
+                          <input type="checkbox" name="jul-30-4" class="okCheckBox" id="jul-30-4"/>
+                        </label>
+                        <h1 class="txtTitulo">SIOPS(Sistema de Informações sobre Orçamentos Públicos em Saúde)</h1>
+                        <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
+                      </div>
+                      <div class="info-tarefa">
+                        <p class="txtParag">
+                          Referente à: <strong>3° bimestre de 2022</strong>
+                        </p>
+                      </div>
+                    </div>
                 </div>
               </div>
-              <!-- Tarefas-month -->
-              <div class="tarefas-month">
+                <!-- tarefas dia 31 -->
+              <div class="day-month">
+                  <div>
+                    <h1 class="btn-dia">31</h1>
+                  </div>
+                  <div class="container-column">
+                    <!-- Tarefas month -->
+                    <div class="tarefas-month">
+                          <div class="opt-tarefas">
+                            <label for="form-control">
+                              <input type="checkbox" name="jul-31-1" class="okCheckBox" id="jul-31-1"/>
+                            </label>
+                            <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                              <p>ENVIO ATRAVÉS DO SICONFI</p>
+                          </div>
+                          <div class="info-tarefa">
+                            <p class="txtParag">
+                              Referente à: <strong>junho de 2022</strong>
+                            </p>
+                          </div>
+                    </div>
+         
+                  </div>
+              </div>
+          </div>
+          <!-- Agosto -->
+          <div id="ago" class="month section-agosto">
+                <!-- tarefas dia 31 -->
+              <div class="day-month">
+                  <div>
+                    <h1 class="btn-dia">31</h1>
+                  </div>
+                  <div class="container-column">
+                    <!-- Tarefas month -->
+                    <div class="tarefas-month">
+                          <div class="opt-tarefas">
+                            <label for="form-control">
+                              <input type="checkbox" name="ago-30-1" class="okCheckBox" id="ago-30-1"/>
+                            </label>
+                            <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                              <p>ENVIO ATRAVÉS DO SICONFI</p>
+                          </div>
+                          <div class="info-tarefa">
+                            <p class="txtParag">
+                              Referente à: <strong>julho de 2022</strong>
+                            </p>
+                          </div>
+                    </div>
+         
+                  </div>
+              </div>
+          </div>
+          <!-- setembro -->
+          <div id="set" class="month section-setembro">
+              <!-- tarefas dia 30 -->
+              <div class="day-month">
+                <div>
+                  <h1 class="btn-dia">30</h1>
+                </div>
+                <div class="container-column">
+                  <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <label for="form-control">
+                        <input type="checkbox" name="set-30-1" class="okCheckBox" id="set-30-1"/>
+                      </label>
+                      <h1 class="txtTitulo">RREO(Relatório Resumido da Execução Orçamentária)</h1>
+                      <p>ENVIO ATRAVÉS DO SICONFI</p>
+                    </div>
+                    <div class="info-tarefa">
+                      <p class="txtParag">
+                        Referente à: <strong>4  ° bimestre de 2022</strong>
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                      <div class="opt-tarefas">
+                        <label for="form-control">
+                          <input type="checkbox" name="set-30-2" class="okCheckBox" id="set-30-2"/>
+                        </label>
+                        <h1 class="txtTitulo">RGF(Relarório de Gestão Fiscal)</h1>
+                        <p>ENVIO ATRAVÉS DO SICONFI</p>
+                      </div>
+                                  <!-- Info-Tarefas -->
+                      <div class="info-tarefa">
+                        <div class="info">
+                          <p class="txtParag">
+                            Referente à: <strong>2° quadrimestre de 2022</strong>
+                          </p>
+                          <p class="txtComent">
+                            (Municípios com menos de 50.000 habitantes)
+                          </p>
+                        </div>
+                        <div class="info">
+                          <!-- <p class="txtParag">
+                            Referente à: <strong>2° semestre de 2021</strong>
+                          </p>
+                          <p class="txtComent">
+                            (Municípios com menos de 50.000 habitantes)
+                          </p> -->
+                        </div>
+                      </div>
+                  </div>
+                  <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <label for="form-control">
+                        <input type="checkbox" name="set-30-3" class="okCheckBox" id="set-30-3"/>
+                      </label>
+                      <h1 class="txtTitulo">SIOPE(Sistema de Informações sobre Orçamentos Públicos em Educação)</h1>
+                      <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
+                    </div>
+                    <div class="info-tarefa">
+                      <p class="txtParag">
+                        Referente à: <strong>4° bimestre de 2022</strong>
+                      </p>
+                    </div>
+                  </div>
+                    <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                      <div class="opt-tarefas">
+                        <label for="form-control">
+                          <input type="checkbox" name="set-30-4" class="okCheckBox" id="set-30-4"/>
+                        </label>
+                        <h1 class="txtTitulo">SIOPS(Sistema de Informações sobre Orçamentos Públicos em Saúde)</h1>
+                        <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
+                      </div>
+                      <div class="info-tarefa">
+                        <p class="txtParag">
+                          Referente à: <strong>4° bimestre de 2022</strong>
+                        </p>
+                      </div>
+                  </div>
+                  <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                        <div class="opt-tarefas">
+                          <label for="form-control">
+                            <input type="checkbox" name="set-30-5" class="okCheckBox" id="set-30-5"/>
+                          </label>
+                          <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                            <p>ENVIO ATRAVÉS DO SICONFI</p>
+                        </div>
+                        <div class="info-tarefa">
+                          <p class="txtParag">
+                            Referente à: <strong>agosto de 2022</strong>
+                          </p>
+                        </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- outubro -->
+          <div id="out" class="month section-outubro">
+                <!-- tarefas dia 31 -->
+              <div class="day-month">
+                  <div>
+                    <h1 class="btn-dia">31</h1>
+                  </div>
+                  <div class="container-column">
+                    <!-- Tarefas month -->
+                    <div class="tarefas-month">
+                          <div class="opt-tarefas">
+                            <label for="form-control">
+                              <input type="checkbox" name="out-30-1" class="okCheckBox" id="out-30-1"/>
+                            </label>
+                            <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                              <p>ENVIO ATRAVÉS DO SICONFI</p>
+                          </div>
+                          <div class="info-tarefa">
+                            <p class="txtParag">
+                              Referente à: <strong>setembro de 2022</strong>
+                            </p>
+                          </div>
+                    </div>
+         
+                  </div>
+              </div>
+          </div>
+          <!-- novembro -->
+          <div id="nov" class="month section-novembro">
+            <!-- tarefas dia 30 -->
+            <div class="day-month">
+              <div>
+                <h1 class="btn-dia">30</h1>
+              </div>
+              <div class="container-column">
+                <!-- Tarefas month -->
                 <div class="tarefas-month">
                   <div class="opt-tarefas">
-                    <input type="checkbox" name="check8" class="okCheckBox" id="check8" />
-                    <label for="check8"></label>
-                    <h1 class="txtTitulo">RGF(Relatório de Gestão Fiscal)</h1>
+                    <label for="form-control">
+                      <input type="checkbox" name="nov-30-1" class="okCheckBox" id="nov-30-1"/>
+                    </label>
+                    <h1 class="txtTitulo">RREO(Relatório Resumido da Execução Orçamentária)</h1>
                     <p>ENVIO ATRAVÉS DO SICONFI</p>
                   </div>
-                  <!-- Info-Tarefas -->
                   <div class="info-tarefa">
-                    <div>
-                      <p class="txtParag">
-                        Referente à: <strong>2° semestre de 2021</strong>
-                      </p>
-                      <p class="txtComent">
-                        (Municípios com menos de 50.000 habitantes)
-                      </p>
-                    </div>
-                    <div>
-                      <p class="txtParag">
-                        Referente à: <strong>2° semestre de 2021</strong>
-                      </p>
-                      <p class="txtComent">
-                        (Municípios com menos de 50.000 habitantes)
-                      </p>
-                    </div>
+                    <p class="txtParag">
+                      Referente à: <strong>5° bimestre de 2022</strong>
+                    </p>
                   </div>
                 </div>
-              </div>
-              <!-- Tarefas-month -->
-              <div class="tarefas-month">
+                <!-- Tarefas month -->
+                <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <label for="form-control">
+                        <input type="checkbox" name="nov-30-2" class="okCheckBox" id="nov-30-2"/>
+                      </label>
+                      <h1 class="txtTitulo">SIOPE(Sistema de Informações sobre Orçamentos Públicos em Educação)</h1>
+                      <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
+                    </div>
+                                <!-- Info-Tarefas -->
+                    <div class="info-tarefa">
+                      <div class="info">
+                        <p class="txtParag">
+                          Referente à: <strong>5° semestre de 2022</strong>
+                        </p>
+                        <p class="txtComent">
+                          (Municípios com menos de 50.000 habitantes)
+                        </p>
+                      </div>
+                      <div class="info">
+                        <!-- <p class="txtParag">
+                          Referente à: <strong>2° semestre de 2021</strong>
+                        </p>
+                        <p class="txtComent">
+                          (Municípios com menos de 50.000 habitantes)
+                        </p> -->
+                      </div>
+                    </div>
+                </div>
+                <!-- Tarefas month -->
                 <div class="tarefas-month">
                   <div class="opt-tarefas">
-                    <input type="checkbox" name="check9" class="okCheckBox" id="check9" />
-                    <label for="check9"></label>
-                    <h1 class="txtTitulo">
-                      SIOPE(Sistema de Informações Sobre Orçamentos Públicos em
-                      Educação)
-                    </h1>
+                    <label for="form-control">
+                      <input type="checkbox" name="nov-30-3" class="okCheckBox" id="nov-30-3"/>
+                    </label>
+                    <h1 class="txtTitulo">SIOPS(Sistema de Informações sobre Orçamentos Públicos em Saúde)</h1>
+                    <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
                   </div>
-                  <!-- Info-Tarefas -->
                   <div class="info-tarefa">
-                    <div>
-                      <p class="txtParag">
-                        Referente à: <strong>6° bimestre de 2021</strong>
-                      </p>
-                      <p class="txtComent"></p>
-                    </div>
-                    <div>
-                      <p class="txtParag"></p>
-                      <p class="txtComent"></p>
-                    </div>
+                    <p class="txtParag">
+                      Referente à: <strong>5° bimestre de 2022</strong>
+                    </p>
                   </div>
                 </div>
-              </div>
-              <!-- Tarefas-month -->
-              <div class="tarefas-month">
-                <div class="tarefas-month">
-                  <div class="opt-tarefas">
-                    <input type="checkbox" name="check10" class="okCheckBox" id="check10" />
-                    <label for="check10"></label>
-                    <h1 class="txtTitulo">
-                      SIOPS(Sistema de Informações Sobre Orçamentos Públicos em
-                      Saúde)
-                    </h1>
-                  </div>
-                  <!-- Info-Tarefas -->
-                  <div class="info-tarefa">
-                    <div>
+                  <!-- Tarefas month -->
+                  <div class="tarefas-month">
+                    <div class="opt-tarefas">
+                      <label for="form-control">
+                        <input type="checkbox" name="nov-30-4" class="okCheckBox" id="nov-30-4"/>
+                      </label>
+                      <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                      <!-- <p>ENVIO ATRAVÉS DO SICONFI</p> -->
+                    </div>
+                    <div class="info-tarefa">
                       <p class="txtParag">
-                        Referente à: <strong>6° bimestre de 2021</strong>
+                        Referente à: <strong>outubro 2022</strong>
                       </p>
-                      <p class="txtComent"></p>
-                    </div>
-                    <div>
-                      <p class="txtParag"></p>
-                      <p class="txtComent"></p>
                     </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
-          <!-- tarefas dia 5 -->
-          <div class="day-month">
-            <div>
-              <h1 class="btn-dia">5</h1>
-            </div>
-            <div class="container-column">
-              <!-- Tarefas-month -->
-              <div class="tarefas-month">
-                <div class="opt-tarefas">
-                  <input type="checkbox" name="check11" class="okCheckBox" id="check11"/>
-                  <label for="check11"></label>
-                  <h1 class="txtTitulo">CDP(Cadastro da Dívida Pública)</h1>
-                </div>
-                <div class="info-tarefa">
-                  <p class="txtParag"></p>
-                </div>
+          <!-- dezembro -->
+          <div id="dez" class="month section-dezembro">
+                <!-- tarefas dia 31 -->
+              <div class="day-month">
+                  <div>
+                    <h1 class="btn-dia">31</h1>
+                  </div>
+                  <div class="container-column">
+                    <!-- Tarefas month -->
+                    <div class="tarefas-month">
+                          <div class="opt-tarefas">
+                            <label for="form-control">
+                              <input type="checkbox" name="dez-30-1" class="okCheckBox" id="dez-30-1"/>
+                            </label>
+                            <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
+                              <p>ENVIO ATRAVÉS DO SICONFI</p>
+                          </div>
+                          <div class="info-tarefa">
+                            <p class="txtParag">
+                              Referente à: <strong>novembro de 2022</strong>
+                            </p>
+                          </div>
+                    </div>
+         
+                  </div>
               </div>
-              <!-- Tarefas-month -->
-              <div class="tarefas-month">
-                <div class="opt-tarefas">
-                  <input  type="checkbox" name="check12" class="okCheckBox" id="check12"/>
-                  <label for="check12"></label>
-                  <h1 class="txtTitulo">MSC(Matriz de Saldos Contábeis)</h1>
-                </div>
-                <div class="info-tarefa">
-                  <p class="txtParag">
-                    Referente à: <strong>dezembro de 2021</strong>
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
-    </div>
+       </section>
+      </div>
     </main>
 
     <script src="./main.js"></script>
