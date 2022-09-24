@@ -155,33 +155,24 @@ body {
   gap: 0.8rem;
 }
 
-.day-month__num {
+.c-task-day__num {
   font-size:18px;
-  color: #004888;
+  font-weight: 900;
+  line-height: 1;
+  margin-top: 2px;
 }
 /* ################################################# */
 /* BOTAO PARA MARCA QUE ATIVIDADE FOI FEITA */
-
-/* .form-control {
-  font-family: system-ui, sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.1;
-  display: grid;
-  grid-template-columns: 1em auto;
-  gap: 0.5em;
-} */
-
 input[type="checkbox"] {
   appearance: none;
   background-color: #fff;
-  margin: 0;
+  margin: 2px 0 0;
   font: inherit;
   color: rgb(216, 214, 214);
-  width: 1.4em;
-  height: 1.4em;
-  border: 0.15em solid currentColor;
-  border-radius: 1.15em;
+  width: 20px;
+  height: 20px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
   transform: translateY(-0.075em);
 }
 
@@ -194,34 +185,33 @@ input[type="checkbox"] {
 
 input[type="checkbox"]::before {
   content: "";
-  width: 0.4em;
-  height: 0.4em;
-  border-radius: 1.15em;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-color: #004888;
+  background-color: #e9be3e;
+  border-radius: 50%;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em #e9be3e;
-  cursor: pointer;
+  /* box-shadow: inset 1em 1em #e9be3e; */
+  /* cursor: pointer; */
 }
 
-input[type="checkbox"]:checked::before {
-  transform: scale(1);
-}
+.c-task:hover input[type="checkbox"] { border-color: #004888; }
+input[type="checkbox"]:checked::before { transform: scale(1); }
 /* #################################################### */
 
-/* Tarefas-month */
-/* .tarefas-month p {} */
-
-/* .opt-tarefas { display: flex; } */
 .c-task {
   display: flex;
-  column-gap: .8rem;
+  column-gap: .5rem;
   margin-bottom: 1.5rem;
 }
 .c-task__title {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   column-gap: 5px;
   font-size: 18px;
+  font-weight: 600;
   line-height: 1.2;
   color: #004888;
 }
@@ -239,7 +229,7 @@ input[type="checkbox"]:checked::before {
   display: inline-flex;
   text-transform: uppercase;
   white-space: nowrap;
-  padding: 3px 8px;
+  padding: 4px 8px 2px;
   border-radius: 50px;
   background: #7E9CB6;
 }
@@ -252,19 +242,11 @@ input[type="checkbox"]:checked::before {
   margin-left: 40px;
 }
 
-/* .txtParag {
-  margin-top: 8px;
-  font-size: 15px;
-  color: #575757;
-} */
-
 .txtComent {
   font-size: 12px;
   color: #575757;
 }
-.marcado {
-  display: block;
-}
+.marcado { display: block; }
 
 /* 
   RESPONSIVE
