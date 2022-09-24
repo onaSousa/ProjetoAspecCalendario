@@ -29,15 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
 // ---------------------------------------
 // altera entre as atividades dos mes
 // ---------------------------------------
-const month = document.querySelectorAll(".month");
-const btnMonth = document.querySelectorAll(".btn-month");
+let month = document.querySelectorAll(".month");
+let btnMonth = document.querySelectorAll(".btn-month");
 
 btnMonth.forEach((btn) => {
   btn.addEventListener("click", () => {
+    localStorage.setItem("sectionOk", btn.id);
     // execulta uma função em cada div no que estão dados no month e active
-    document.querySelectorAll(".month.active").forEach(function (mes) {
-      mes.classList.remove("active");
-      console.log(mes);
+    document.querySelectorAll(".month.marcado").forEach(function (mes) {
+      mes.classList.remove("marcado");
     });
 
     // addc e remove o active no correspondente btn mes
@@ -50,15 +50,29 @@ btnMonth.forEach((btn) => {
     btn.classList.toggle("active");
 
     // chama os dados que eu estou precisando em cada btn
-    document.querySelector(`#${btn.id.slice(0, 3)}`).classList.add("active");
+    document.querySelector(`#${btn.id.slice(0, 3)}`).classList.add("marcado");
     sectionOk = `#${btn.id.slice(0, 3)}`;
   });
 });
+let pegar = localStorage.getItem("sectionOk");
 
-// ---------------------------------------
-// Marca o mês Atual
-// ---------------------------------------
-// pega o mês Atual e verifica se tem o mes na minha tag main
+if (pegar) {
+  var marcaSalva = document.querySelector(`#${pegar.slice(0, 3)}`);
+  sectionOk = `#${pegar.slice(0, 3)}`;
+  marcaSalva.classList.toggle("marcado");
+ 
+}
+if (pegar) {
+  var marcaSalva = document.querySelector(`#${pegar}`);
+  sectionOk = `#${pegar}`;
+  marcaSalva.classList.toggle("active");
+}
+
+
+// // ---------------------------------------
+// // Marca o mês Atual
+// // ---------------------------------------
+// // pega o mês Atual e verifica se tem o mes na minha tag main
 
 function mesAtual() {
   const data = new Date();
@@ -70,6 +84,7 @@ function mesAtual() {
       break;
     case 1:
       return "fev";
+      break;
     case 2:
       return "mar";
       break;
@@ -90,7 +105,6 @@ function mesAtual() {
       break;
     case 8:
       return "set";
-
       break;
     case 9:
       return "out";
@@ -105,8 +119,15 @@ function mesAtual() {
 }
 
 let mesMarcado = mesAtual();
-// ativa a marcação do btn do mes atual
-document.getElementById(mesMarcado).classList.toggle("active");
+// ativa a marcação do btn do mes atua
+  let monthMarcadoMesAtual = document.getElementById(mesMarcado).classList.toggle("marcado");
+  
+  // chama a div que o btn correspondente
+  let btnMonthMarcadoAtual = document.getElementById(`${mesMarcado}-btn`).classList.toggle("active");
 
-// chama a div que o btn correspondente
-document.getElementById(`${mesMarcado}-btn`).classList.toggle("active");
+  // desmarca se for a 2 segunda entrada no programa
+if(pegar){
+  monthMarcadoMesAtual = document.getElementById(mesMarcado).classList.remove("marcado");
+
+  btnMonthMarcadoAtual= document.getElementById(`${mesMarcado}-btn`).classList.remove("active");
+}
