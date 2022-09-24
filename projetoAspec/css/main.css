@@ -117,6 +117,8 @@ body {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 0.4rem;
 }
+.main-header { margin-bottom: 1.5rem; }
+
 .month { display: none; }
 
 /* header main */
@@ -128,11 +130,7 @@ body {
   line-height: 1;
   text-transform: uppercase;
 }
-.c-heading-section.m-left { padding-left: 1rem; }
-.c-heading-section.m-right {
-  text-align: right;
-  padding-right: 1rem;
-}
+.c-heading-section.m-right { text-align: right; }
 .c-heading-section::before {
   content: "";
   width: 100%;
@@ -143,22 +141,21 @@ body {
 }
 .c-heading-section.m-left::before {
   border-radius: 0 20px 20px 0;
-  right: 100%;
+  right: 101%;
 }
 .c-heading-section.m-right::before {
   border-radius: 20px 0 0 20px;
-  left: 100%;
+  left: 101.5%;
 }
 
 /* Dias do Mês */
-.day-month {
-  margin: 4%;
+.c-task-day {
   display: flex;
   flex-direction: row;
   gap: 0.8rem;
 }
 
-.day-month h1 {
+.day-month__num {
   font-size:18px;
   color: #004888;
 }
