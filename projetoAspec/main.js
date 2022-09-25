@@ -3,7 +3,7 @@ let sectionOk = "";
 // salva os dados do input e pega os mesmos dados
 // ---------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
-  var checkbox = document.querySelectorAll("input[class='okCheckBox']");
+  var checkbox = document.getElementsByClassName("okCheckBox");
 
   for (var item of checkbox) {
     item.addEventListener("click", function () {
