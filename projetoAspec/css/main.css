@@ -1,11 +1,19 @@
 /* reset */
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
-svg { fill: currentColor; }
-a { text-decoration: none; }
-strong { font-weight: 700; }
+svg {
+  fill: currentColor;
+}
+a {
+  text-decoration: none;
+}
+strong {
+  font-weight: 700;
+}
 /* reset */
 
 /* Helpers */
@@ -31,7 +39,9 @@ strong { font-weight: 700; }
   width: auto;
 }
 
-.h-db { display: block; }
+.h-db {
+  display: block;
+}
 /* Helpers */
 
 /* Default */
@@ -68,7 +78,9 @@ body {
   flex-flow: column-reverse;
   align-self: flex-end;
 }
-.c-title-page__num { font-size: 4.5rem; }
+.c-title-page__num {
+  font-size: 4.5rem;
+}
 .c-title-page__txt {
   color: #004888;
   font-size: 0.78rem;
@@ -92,11 +104,19 @@ body {
   font-size: 12px;
   color: #eaa010;
 }
-.c-cta strong { color: #004888;}
+.c-cta strong {
+  color: #004888;
+}
 
-.navbar { align-self: flex-end; }
-.navbar ul { display: flex; }
-.navbar li:not(:last-child) { margin-right: 1px; }
+.navbar {
+  align-self: flex-end;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar li:not(:last-child) {
+  margin-right: 1px;
+}
 
 .btn-month {
   display: block;
@@ -127,11 +147,17 @@ body {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 0.4rem;
 }
-.main-header { margin-bottom: 1.5rem; }
+.main-header {
+  margin-bottom: 1.5rem;
+}
 
 /* interação com os meses */
-.month { display: none; }
-.marcado { display: block; }
+.month {
+  display: none;
+}
+.marcado {
+  display: block;
+}
 /* interação com os meses */
 
 /* .month {} */
@@ -145,7 +171,9 @@ body {
   line-height: 1;
   text-transform: uppercase;
 }
-.c-heading-section.m-right { text-align: right; }
+.c-heading-section.m-right {
+  text-align: right;
+}
 .c-heading-section::before {
   content: "";
   width: 100%;
@@ -176,6 +204,23 @@ body {
   line-height: 1;
   margin-top: 2px;
 }
+
+.container-notes {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.container-notes input {
+  margin-left: 3.7rem;
+}
+
+.notes-col {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  margin-left: 60px;
+}
+
 /* ################################################# */
 /* BOTAO PARA MARCA QUE ATIVIDADE FOI FEITA */
 input[type="checkbox"] {
@@ -213,13 +258,17 @@ input[type="checkbox"]::before {
   /* cursor: pointer; */
 }
 
-.c-task:hover input[type="checkbox"] { border-color: #004888; }
-input[type="checkbox"]:checked::before { transform: scale(1); }
+.c-task:hover input[type="checkbox"] {
+  border-color: #004888;
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
 /* #################################################### */
 
 .c-task {
   display: flex;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
 .c-task__title {
@@ -236,7 +285,9 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
   column-gap: 1rem;
   font-size: 14px;
 }
-.c-task__desc small { font-size: 12px; }
+.c-task__desc small {
+  font-size: 12px;
+}
 
 .c-badge {
   color: #ffffff;
@@ -247,14 +298,21 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
   white-space: nowrap;
   padding: 5px 10px 4px;
   border-radius: 50px;
-  background: #7E9CB6;
+  background: #7e9cb6;
 }
 
-.c-clCE { color: green; }
-.c-clRN { color: orange; }
-.c-clMA { color: blue; }
-.c-clPA { color: violet; }
-
+.c-clCE {
+  color: green;
+}
+.c-clRN {
+  color: orange;
+}
+.c-clMA {
+  color: blue;
+}
+.c-clPA {
+  color: violet;
+}
 
 /* Info-Tarefas */
 .info-tarefa {
@@ -268,7 +326,6 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
   font-size: 12px;
   color: #575757;
 }
-
 
 /* 
   RESPONSIVE

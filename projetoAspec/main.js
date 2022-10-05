@@ -131,3 +131,12 @@ if(pegar){
 
   btnMonthMarcadoAtual= document.getElementById(`${mesMarcado}-btn`).classList.remove("active");
 }
+
+let btnNotes = document.querySelector(".btn-notes")
+
+function callNotes(btn) {
+  btn.addEventListener("click", () => {
+    
+    console.log(btn)
+  })
+}
