@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jonas -- Designer -- https://www.linkedin.com/in/onasousa/
+    wellerson -- Desenvolvedor -- https://github.com/werlleson
+
+# THANKS
+
+    HTML5 Boilerplate
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    
