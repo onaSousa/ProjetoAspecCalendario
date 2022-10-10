@@ -145,10 +145,10 @@ body {
   line-height: 1;
   text-transform: uppercase;
 }
-.c-heading-section.m-right { text-align: right; }
+/* .c-heading-section.m-right { text-align: right; } */
 .c-heading-section::before {
   content: "";
-  width: 100%;
+  width: 100vw;
   height: 1.5rem;
   display: block;
   background-color: #fff;
@@ -160,7 +160,7 @@ body {
 }
 .c-heading-section.m-right::before {
   border-radius: 20px 0 0 20px;
-  left: 101.5%;
+  left: 46%;
 }
 
 /* Dias do Mês */
