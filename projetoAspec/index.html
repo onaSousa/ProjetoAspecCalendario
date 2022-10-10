@@ -238,16 +238,18 @@
             </div>
           </div>
         </div>
-        <div>
-          <button class="btnNotes" id="btn-notes" onclick="">anotações</button>
-        </div>
         <!-- anotações -->
-        <div class="container-notes">
-          <div class="notes-col">
-            <textarea name="" id="" class="notesInput" cols="60" rows="10"></textarea>
-          </div>
+        <div>
           <div>
-            <input type="submit"/>
+            <button class="btnNotes" id="btn-notes" onclick="callNotes()" >anotações</button>
+          </div>
+          <div class="container-notes">
+            <div class="notes-col">
+              <textarea name="" id="notesInput" class="notesInput" cols="60" rows="10" input></textarea>
+            </div>
+            <div>
+              <input type="submit" class="btn-submit" onclick="btnSubmit()"/>
+            </div>
           </div>
         </div>
       </div>

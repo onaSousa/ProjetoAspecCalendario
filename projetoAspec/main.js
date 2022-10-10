@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", function () {
       localStorage.item // verifico se existe localStorage
         ? (localStorage.item =
-            localStorage.item.indexOf(this.id + ",") == -1 // verifico de localStorage contém o id
-              ? localStorage.item + this.id + "," // não existe. Adiciono a id no loaclStorage
-              : localStorage.item.replace(this.id + ",", "")) // já existe, apago do localStorage
+          localStorage.item.indexOf(this.id + ",") == -1 // verifico de localStorage contém o id
+            ? localStorage.item + this.id + "," // não existe. Adiciono a id no loaclStorage
+            : localStorage.item.replace(this.id + ",", "")) // já existe, apago do localStorage
         : (localStorage.item = this.id + ","); // não existe. Crio com o id do checkbox
     });
   }
@@ -60,7 +60,7 @@ if (pegar) {
   var marcaSalva = document.querySelector(`#${pegar.slice(0, 3)}`);
   sectionOk = `#${pegar.slice(0, 3)}`;
   marcaSalva.classList.toggle("marcado");
- 
+
 }
 if (pegar) {
   var marcaSalva = document.querySelector(`#${pegar}`);
@@ -120,23 +120,32 @@ function mesAtual() {
 
 let mesMarcado = mesAtual();
 // ativa a marcação do btn do mes atua
-  let monthMarcadoMesAtual = document.getElementById(mesMarcado).classList.toggle("marcado");
-  
-  // chama a div que o btn correspondente
-  let btnMonthMarcadoAtual = document.getElementById(`${mesMarcado}-btn`).classList.toggle("active");
+let monthMarcadoMesAtual = document.getElementById(mesMarcado).classList.toggle("marcado");
 
-  // desmarca se for a 2 segunda entrada no programa
-if(pegar){
+// chama a div que o btn correspondente
+let btnMonthMarcadoAtual = document.getElementById(`${mesMarcado}-btn`).classList.toggle("active");
+
+// desmarca se for a 2 segunda entrada no programa
+if (pegar) {
   monthMarcadoMesAtual = document.getElementById(mesMarcado).classList.remove("marcado");
 
-  btnMonthMarcadoAtual= document.getElementById(`${mesMarcado}-btn`).classList.remove("active");
+  btnMonthMarcadoAtual = document.getElementById(`${mesMarcado}-btn`).classList.remove("active");
 }
 
-let btnNotes = document.querySelector(".btn-notes")
+// // ---------------------------------------
+// // abrir as anotações digitar e enviar
+// // ---------------------------------------
 
-function callNotes(btn) {
-  btn.addEventListener("click", () => {
-    
-    console.log(btn)
-  })
+let btnNotes = document.getElementById("btn-notes")
+let boxNotes = document.querySelector(".container-notes")
+
+
+function callNotes() {
+  boxNotes.style.display = "block"
 }
+function btnSubmit(){
+  boxNotes.style.display = "none"
+}
+
+  
+
