@@ -73,16 +73,26 @@ body {
   font-weight: 900;
   line-height: 1;
   display: flex;
-  flex-flow: column-reverse;
+  flex-flow: column;
   align-self: flex-end;
+  align-items: center;
 }
-.c-title-page__num { font-size: 4.5rem; }
+.c-title-page__num {
+  font-size: 4.5rem;
+  margin-top: 6px;
+  margin-bottom: -8px;
+}
 .c-title-page__txt {
+  position: relative;
   color: #004888;
   font-size: 0.78rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
+.c-title-page__txt img { margin-top: -4px; }
 
 .c-cta {
   font-weight: bold;
