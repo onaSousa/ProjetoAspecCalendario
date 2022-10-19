@@ -132,20 +132,5 @@ if (pegar) {
   btnMonthMarcadoAtual = document.getElementById(`${mesMarcado}-btn`).classList.remove("active");
 }
 
-// // ---------------------------------------
-// // abrir as anotações digitar e enviar
-// // ---------------------------------------
 
-let btnNotes = document.getElementById("btn-notes")
-let boxNotes = document.querySelector(".container-notes")
-
-
-function callNotes() {
-  boxNotes.style.display = "block"
-}
-function btnSubmit(){
-  boxNotes.style.display = "none"
-}
-
-  
 

@@ -136,16 +136,67 @@ if (pegar) {
 // // abrir as anotações digitar e enviar
 // // ---------------------------------------
 
-let btnNotes = document.getElementById("btn-notes")
-let boxNotes = document.querySelector(".container-notes")
 
+let boxColumnNotes = document.querySelector(".column-notes")
+const notelist = document.querySelector('#notelist')
 
-function callNotes() {
-  boxNotes.style.display = "block"
+function saveNotes() {
+  boxColumnNotes.style.display = "block"
 }
+
 function btnSubmit(){
-  boxNotes.style.display = "none"
+  let arraySalvoLocalStorage = []
+  
+  // salva todo dado que for digitado no input criando lista infinita
+  if(localStorage.getItem('dados') != null){
+    arraySalvoLocalStorage = JSON.parse(localStorage.getItem('dados'))
+  }else{
+    arraySalvoLocalStorage;
+  }
+  let notesInput = document.getElementById('notesInput').value
+  // cria um objeto com as informações que digito no INPUT
+  let info = {
+    notesInput
+  }
+// coloca as informações do objeto dentro do array
+  arraySalvoLocalStorage.push(info)
+// salva em forma de string os dados no localStorage
+  let infoJson = JSON.stringify(arraySalvoLocalStorage)
+  localStorage.setItem('dados', infoJson)
+
+  pegandoDadosColocandoLista()
+
 }
 
-  
 
+
+function pegandoDadosColocandoLista(){
+  const pegaLocalStorage = JSON.parse(localStorage.getItem('dados'))
+
+  if(pegaLocalStorage != null){
+    let tr = "";
+    pegaLocalStorage.map((conteudo) => {
+      tr += `
+          <tr>
+           <td> ${conteudo.notesInput}</td>
+          </tr><br>
+      `
+    })
+  notelist.innerHTML = tr;
+  }
+}
+function atualizar(){
+  let localSave = JSON.parse(localStorage.getItem('dados'))
+  if(localSave != null){
+    let tr = "";
+    localSave.map((conteudo) => {
+      tr += `
+          <tr>
+           <td> ${conteudo.notesInput}</td>
+          </tr><br>
+      `
+    })
+  notelist.innerHTML = tr;
+  }
+ 
+}

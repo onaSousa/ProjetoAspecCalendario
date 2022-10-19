@@ -239,17 +239,16 @@
           </div>
         </div>
         <!-- anotações -->
-        <div>
+        <div class="container-notes">
           <div>
-            <button class="btnNotes" id="btn-notes" onclick="callNotes()" >anotações</button>
+            <button class="btnNotes" id="btnNotes" onclick="saveNotes()" >anotações</button>
           </div>
-          <div class="container-notes">
-            <div class="notes-col">
-              <textarea name="" id="notesInput" class="notesInput" cols="60" rows="10" input></textarea>
-            </div>
-            <div>
+          <div class="column-notes">
+              <input type="text" name="" id="notesInput" class="note-sInput" cols="60" rows="10" input>
               <input type="submit" class="btn-submit" onclick="btnSubmit()"/>
-            </div>
+          </div>
+          <div id="noteList">
+
           </div>
         </div>
       </div>
@@ -1448,7 +1447,7 @@
     </div>
   </main>
   
-  <script src="./main.js"></script>
+  <script src="../main.js"></script>
 </body>
 
 </html>

@@ -205,17 +205,8 @@ body {
   margin-top: 2px;
 }
 
-.container-notes {
-  display: flex;
-  flex-direction: column;
+.column-notes{
   display: none;
-}
-
-.notes-col {
-  display: flex;
-  flex-direction: column;
-  width: 20rem;
-  
 }
 
 /* ################################################# */
