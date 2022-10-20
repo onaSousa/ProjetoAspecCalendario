@@ -138,65 +138,65 @@ if (pegar) {
 
 
 let boxColumnNotes = document.querySelector(".column-notes")
-const notelist = document.querySelector('#notelist')
+const noteList = document.getElementById('noteList')
 
+atualizar()
 function saveNotes() {
   boxColumnNotes.style.display = "block"
 }
 
 function btnSubmit(){
-  let arraySalvoLocalStorage = []
+  let arraySalvoLocal = []
   
   // salva todo dado que for digitado no input criando lista infinita
   if(localStorage.getItem('dados') != null){
-    arraySalvoLocalStorage = JSON.parse(localStorage.getItem('dados'))
+    arraySalvoLocal = JSON.parse(localStorage.getItem('dados'))
   }else{
-    arraySalvoLocalStorage;
+    arraySalvoLocal;
   }
-  let notesInput = document.getElementById('notesInput').value
+
+  let notesInput = document.getElementById('notesInput').value;
   // cria um objeto com as informações que digito no INPUT
   let info = {
     notesInput
-  }
+  };
 // coloca as informações do objeto dentro do array
-  arraySalvoLocalStorage.push(info)
+  arraySalvoLocal.push(info)
 // salva em forma de string os dados no localStorage
-  let infoJson = JSON.stringify(arraySalvoLocalStorage)
+  let infoJson = JSON.stringify(arraySalvoLocal)
   localStorage.setItem('dados', infoJson)
 
   pegandoDadosColocandoLista()
 
 }
 
-
-
 function pegandoDadosColocandoLista(){
   const pegaLocalStorage = JSON.parse(localStorage.getItem('dados'))
 
   if(pegaLocalStorage != null){
-    let tr = "";
-    pegaLocalStorage.map((conteudo) => {
+    let tr = '';
+    pegaLocalStorage.map(conteudo => {
       tr += `
           <tr>
            <td> ${conteudo.notesInput}</td>
-          </tr><br>
-      `
+          </tr><br>`
     })
-  notelist.innerHTML = tr;
+noteList.innerHTML = tr
   }
 }
 function atualizar(){
-  let localSave = JSON.parse(localStorage.getItem('dados'))
+  const localSave = JSON.parse(localStorage.getItem('dados'))
+
   if(localSave != null){
-    let tr = "";
-    localSave.map((conteudo) => {
+    let tr = '';
+    localSave.map(conteudo => {
       tr += `
           <tr>
            <td> ${conteudo.notesInput}</td>
           </tr><br>
       `
     })
-  notelist.innerHTML = tr;
+  noteList.innerHTML = tr
   }
  
 }
