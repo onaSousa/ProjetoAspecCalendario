@@ -1,4 +1,5 @@
 let sectionOk = "";
+document.getElementById('')
 // ---------------------------------------
 // salva os dados do input e pega os mesmos dados
 // ---------------------------------------
@@ -9,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", function () {
       localStorage.item // verifico se existe localStorage
         ? (localStorage.item =
-          localStorage.item.indexOf(this.id + ",") == -1 // verifico de localStorage contém o id
-            ? localStorage.item + this.id + "," // não existe. Adiciono a id no loaclStorage
-            : localStorage.item.replace(this.id + ",", "")) // já existe, apago do localStorage
+            localStorage.item.indexOf(this.id + ",") == -1 // verifico de localStorage contém o id
+              ? localStorage.item + this.id + "," // não existe. Adiciono a id no loaclStorage
+              : localStorage.item.replace(this.id + ",", "")) // já existe, apago do localStorage
         : (localStorage.item = this.id + ","); // não existe. Crio com o id do checkbox
     });
   }
@@ -60,14 +61,12 @@ if (pegar) {
   var marcaSalva = document.querySelector(`#${pegar.slice(0, 3)}`);
   sectionOk = `#${pegar.slice(0, 3)}`;
   marcaSalva.classList.toggle("marcado");
-
 }
 if (pegar) {
   var marcaSalva = document.querySelector(`#${pegar}`);
   sectionOk = `#${pegar}`;
   marcaSalva.classList.toggle("active");
 }
-
 
 // // ---------------------------------------
 // // Marca o mês Atual
@@ -120,83 +119,102 @@ function mesAtual() {
 
 let mesMarcado = mesAtual();
 // ativa a marcação do btn do mes atua
-let monthMarcadoMesAtual = document.getElementById(mesMarcado).classList.toggle("marcado");
+let monthMarcadoMesAtual = document
+  .getElementById(mesMarcado)
+  .classList.toggle("marcado");
 
 // chama a div que o btn correspondente
-let btnMonthMarcadoAtual = document.getElementById(`${mesMarcado}-btn`).classList.toggle("active");
+let btnMonthMarcadoAtual = document
+  .getElementById(`${mesMarcado}-btn`)
+  .classList.toggle("active");
 
 // desmarca se for a 2 segunda entrada no programa
 if (pegar) {
-  monthMarcadoMesAtual = document.getElementById(mesMarcado).classList.remove("marcado");
+  monthMarcadoMesAtual = document
+    .getElementById(mesMarcado)
+    .classList.remove("marcado");
 
-  btnMonthMarcadoAtual = document.getElementById(`${mesMarcado}-btn`).classList.remove("active");
+  btnMonthMarcadoAtual = document
+    .getElementById(`${mesMarcado}-btn`)
+    .classList.remove("active");
 }
 
 // // ---------------------------------------
 // // abrir as anotações digitar e enviar
 // // ---------------------------------------
 
+let boxColumnNotes = document.querySelector(".column-notes");
+const noteList = document.getElementById("noteList");
 
-let boxColumnNotes = document.querySelector(".column-notes")
-const noteList = document.getElementById('noteList')
-
-atualizar()
+atualizar();
 function saveNotes() {
-  boxColumnNotes.style.display = "block"
+  boxColumnNotes.style.display = "block";
 }
 
-function btnSubmit(){
-  let arraySalvoLocal = []
-  
+// quando clicar executa toda função
+function btnSubmit() {
+  let arraySalvoLocal = [];
+
   // salva todo dado que for digitado no input criando lista infinita
-  if(localStorage.getItem('dados') != null){
-    arraySalvoLocal = JSON.parse(localStorage.getItem('dados'))
-  }else{
+  if (localStorage.getItem("dados") != null) {
+    arraySalvoLocal = JSON.parse(localStorage.getItem("dados"));
+  } else {
     arraySalvoLocal;
   }
 
-  let notesInput = document.getElementById('notesInput').value;
+  let notesInput = document.getElementById("notesInput").value;
   // cria um objeto com as informações que digito no INPUT
   let info = {
-    notesInput
+    notesInput,
   };
-// coloca as informações do objeto dentro do array
-  arraySalvoLocal.push(info)
-// salva em forma de string os dados no localStorage
-  let infoJson = JSON.stringify(arraySalvoLocal)
-  localStorage.setItem('dados', infoJson)
+  // coloca as informações do objeto dentro do array
+  arraySalvoLocal.push(info);
+  // salva em forma de string os dados no localStorage
+  let infoJson = JSON.stringify(arraySalvoLocal);
+  localStorage.setItem("dados", infoJson);
 
-  pegandoDadosColocandoLista()
-
+  pegandoDadosColocandoLista();
 }
 
-function pegandoDadosColocandoLista(){
-  const pegaLocalStorage = JSON.parse(localStorage.getItem('dados'))
+// criar a lista na tela pegando do localStorage as informações
+function pegandoDadosColocandoLista() {
+  const pegaLocalStorage = JSON.parse(localStorage.getItem("dados"));
 
-  if(pegaLocalStorage != null){
-    let tr = '';
-    pegaLocalStorage.map(conteudo => {
-      tr += `
-          <tr>
-           <td> ${conteudo.notesInput}</td>
-          </tr><br>`
-    })
-noteList.innerHTML = tr
+  if (pegaLocalStorage != null) {
+    let li = "";
+    pegaLocalStorage.map((conteudo) => {
+      li += `
+          <ul>
+           <li>${conteudo.notesInput}</li>
+          </ul>`;
+    });
+    noteList.innerHTML = li;
   }
 }
-function atualizar(){
-  const localSave = JSON.parse(localStorage.getItem('dados'))
+function atualizar() {
+  const localSave = JSON.parse(localStorage.getItem("dados"));
 
-  if(localSave != null){
-    let tr = '';
-    localSave.map(conteudo => {
-      tr += `
-          <tr>
-           <td> ${conteudo.notesInput}</td>
-          </tr><br>
-      `
-    })
-  noteList.innerHTML = tr
+  if (localSave != null) {
+    let li = "";
+    localSave.map((conteudo) => {
+      li += `
+          <ul>
+         <li>${conteudo.notesInput}</li>
+          </ul>`;
+    });
+    noteList.innerHTML = li;
   }
- 
+}
+// quando clicar na tecla "ENTER" addc o que foi escrito no localStorage
+document.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    var btn = document.querySelector(".btn-submit");
+
+    btn.click();
+  }
+});
+
+function remover(){
+  localStorage.removeItem('dados')
+
 }
