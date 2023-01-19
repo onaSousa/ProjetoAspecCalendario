@@ -389,20 +389,25 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
   RESPONSIVE
 */
 @media (max-width: 760px) {
-  .container { padding: 0 3px; }
+  .container { padding: 0; }
 
   .c-title-page {
     position: absolute;
+    top: 10px;
     left: 0;
-    bottom: 0;
+    right: 0;
   }
+  .c-title-page__num { font-size: 1.5rem; }
 
   .navbar {
     width: 100%;
     overflow-x: auto;
   }
 
+  .c-qua, .c-bi, .c-legs, 
   .c-cta { display: none; }
+
+  .o-footer .container { flex-flow: column; }
 }
 
 @media (min-width: 1000px) {
