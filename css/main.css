@@ -85,7 +85,7 @@ body {
 .c-title-page__txt {
   position: relative;
   font-size: 0.78rem;
-  color: #e9be3e;
+  color: #004888;
   letter-spacing: 1px;
   text-transform: uppercase;
   display: flex;
@@ -102,7 +102,7 @@ body {
   flex-direction: column;
   width: 180px;
   padding: 7px 18px 4px;
-  background: #fff url(../../images/cta-icon.png) 90% center no-repeat;
+  background: #fff url(../images/cta-icon.png) 90% center no-repeat;
   background-size: 12%;
   border-radius: 50px;
 }
@@ -193,14 +193,9 @@ body {
 /* header section */
 .main {
   overflow: hidden;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
-/*.main-header,
-.month.marcado {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 0.4rem;
-}*/
+
 .main-header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -395,15 +390,8 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
   .container { padding: 0; }
   .main > .container { padding: 0 .5rem; }
 
-  .c-title-page {
-    z-index: 5;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
-  }
+  .c-title-page { padding: 1rem; }
   .c-title-page__num { font-size: 1.5rem; }
-  .c-title-page__txt img { background-color: #fff; }
 
   .c-heading-section { padding: 0 0.3rem; }
   .c-heading-section.m-right { text-align: right; }
@@ -411,12 +399,18 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
   .navbar {
     width: 100%;
     overflow-x: auto;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    background-color: #ecf0f9;
   }
 
   .c-qua, .c-bi, .c-legs, 
   .c-cta { display: none; }
 
-  .o-footer .container { flex-flow: column; }
+  .o-footer .container {
+    padding: 0 1rem 90px 1rem;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -432,6 +426,8 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
     align-items: center;
   }
 
+  .main { margin-top: 4rem; }
+
   .main-header,
   .month.marcado {
     display: grid;
@@ -445,8 +441,6 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
   }
 
   .c-heading-section.m-right::before { left: 46%; }
-
-  .c-title-page__txt { color: #004888; }
 }
 
 
@@ -474,7 +468,7 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 10;
+	z-index: 999;
 	display: flex;
 	padding: 1em;
 	background-color: rgba(0,0,0,.75);
