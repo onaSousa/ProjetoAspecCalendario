@@ -387,6 +387,7 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
   RESPONSIVE
 */
 @media (max-width: 760px) {
+  .hide-rwd-only { display: none; }
   .container { padding: 0; }
   .main > .container { padding: 0 .5rem; }
 
@@ -408,9 +409,7 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
   .c-qua, .c-bi, .c-legs, 
   .c-cta { display: none; }
 
-  .o-footer .container {
-    padding: 0 1rem 90px 1rem;
-  }
+  .o-footer .container { padding: 0 1rem 90px 1rem; }
 }
 
 @media (min-width: 1000px) {
