@@ -394,7 +394,13 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
   .c-title-page { padding: 1rem; }
   .c-title-page__num { font-size: 1.5rem; }
 
-  .c-heading-section { padding: 0 0.3rem; }
+  .c-heading-section {
+    padding: 0 0.3rem;
+    margin-left: 58px;
+    margin-bottom: 16px;
+    line-height: 27px;
+  }
+
   .c-heading-section.m-right { text-align: right; }
 
   .navbar {
@@ -413,6 +419,9 @@ input[type="checkbox"]:checked::before { transform: scale(1); }
 }
 
 @media (min-width: 1000px) {
+  .o-col-left > .c-heading-section,
+  .o-col-right > .c-heading-section { display: none; }
+
   .c-task__title {
     display: flex;
     align-items: center;
